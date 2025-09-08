@@ -14,8 +14,6 @@ public class sol1{
             if(arr[i]!=0)
                 newArr[j++] = arr[i];
         }
-        for(int i=0;i<n;i++){
-            arr[i] = newArr[i];
-        }
+        System.arraycopy(newArr, 0, arr, 0, n);
     }
 }
