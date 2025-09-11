@@ -11,7 +11,6 @@ public class sol1{
         int[] newA = new int[N];
         for(int i=N-1;i>=0;i--) 
             newA[N-i-1] = A[i];
-        for(int i=0;i<N;i++)
-            A[i] = newA[i];
+        System.arraycopy(newA, 0, A, 0,N);
     }
 }
