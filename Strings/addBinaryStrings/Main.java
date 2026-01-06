@@ -21,33 +21,22 @@ public class Main {
     static String addBinaryStrings(String s1, int n1, String s2, int n2) {
         
         // reduces extra traversal
-        if(n1 < n2) {
-            return addBinaryStrings(s2,n2,s1,n1);
-        }
-
-        int j = n2 - 1;
+        int i = n1-1;
+        int j = n2-1;
         int carry = 0;
-        StringBuilder result = new StringBuilder();
 
-        for(int i = n1-1;i>=0;i--) {
-            int bit1 = s1.charAt(i)-'0';
-            int sum = bit1 + carry;
+        StringBuilder res = new StringBuilder();
 
-            if(j >= 0){
-                int bit2 = s2.charAt(j)-'0';
-                sum += bit2;
-                j--;
-            }
-            int bit = sum%2;
+        while(i>=0 || j>=0 || carry == 1)
+        {
+            int sum = carry;
+            if(i>=0) sum+=s1.charAt(i--)-'0';
+            if(j>=0) sum+=s2.charAt(j--)-'0';
+
+            res.append(sum%2);
             carry = sum/2;
-
-            result.append((char)(bit+'0'));
         }
-
-        if(carry > 0){
-            result.append('1');
-        }
-        return result.reverse().toString();
+        return res.reverse().toString();
 
     }
 
