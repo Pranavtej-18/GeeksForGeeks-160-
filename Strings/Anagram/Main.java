@@ -16,7 +16,8 @@ public class Main{
         }
         boolean isAnagram = true;
         for(char c:s1.toCharArray()) {
-            if(map1.get(c)!=map2.get(c)) isAnagram = false;
+            if(map1.get(c) != map2.get(c)) 
+                isAnagram = false;
         }
         if(isAnagram)
             System.out.println("s1 and s2 are Anagrams");
