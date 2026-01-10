@@ -18,6 +18,9 @@ public class Sorting
         obj.sort012(A);
 
         for(int a: A)
+        {
             System.out.print(a+" ");
+        }
+            
     } 
 }
