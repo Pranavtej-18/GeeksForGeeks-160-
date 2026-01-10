@@ -14,7 +14,7 @@ public class Sorting
     {
         Solutions obj = new Solutions();
         
-        int[] A = {25, 7, 4, 26, 1};
+        int[] A = {2, 0, 2, 1, 0, 0, 1};
         obj.sort012(A);
 
         for(int a: A)
